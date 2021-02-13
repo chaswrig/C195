@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <TableView fx:id="patientTable" layoutX="28.0" layoutY="14.0" prefHeight="150.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="patientId" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="patientName" prefWidth="175.0" text="Name" />
+            <TableColumn fx:id="patientAddress" minWidth="5.0" prefWidth="250.0" text="Address" />
+            <TableColumn fx:id="patientInsurance" prefWidth="225.0" text="Insurance Provider" />
+        </columns>
+      </TableView>
+      <HBox alignment="TOP_CENTER" layoutX="28.0" layoutY="164.0" maxHeight="25.0" maxWidth="700.0" minHeight="25.0" minWidth="700.0" prefHeight="25.0" prefWidth="700.0" spacing="20.0">
+         <children>
+            <Button fx:id="addPatient" alignment="CENTER" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#onAddPatient" prefHeight="25.0" prefWidth="150.0" text="Add Patient" />
+            <Button fx:id="updatePatient" alignment="CENTER" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#onUpdatePatient" prefHeight="25.0" prefWidth="150.0" text="Update Patient" />
+            <Button fx:id="deletePatient" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#onDeletePatient" prefHeight="25.0" prefWidth="150.0" text="Delete Patient" />
+         </children>
+      </HBox>
+      <TableView fx:id="weeklyTable" layoutX="29.0" layoutY="280.0" prefHeight="200.0" prefWidth="700.0">
+         <columns>
+            <TableColumn fx:id="weeklyAppId" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="weeklyPatient" prefWidth="100.0" text="Patient" />
+            <TableColumn fx:id="weeklyCounselor" prefWidth="100.0" text="Counselor" />
+            <TableColumn fx:id="weeklyType" prefWidth="205.0" text="Type" />
+            <TableColumn fx:id="weeklyNotes" prefWidth="125.0" text="Notes" />
+            <TableColumn fx:id="weeklyStart" prefWidth="120.0" text="Start" />
+         </columns>
+      </TableView>
+      <HBox alignment="TOP_CENTER" layoutX="29.0" layoutY="480.0" maxHeight="25.0" maxWidth="700.0" minHeight="25.0" minWidth="700.0" prefHeight="25.0" prefWidth="700.0" spacing="20.0">
+         <children>
+            <Button fx:id="addAppointment" alignment="CENTER" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#onAddAppointment" prefHeight="25.0" prefWidth="150.0" text="Add Appointment" />
+            <Button fx:id="updateAppointment" alignment="CENTER" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#onUpdateAppointment" prefHeight="25.0" prefWidth="150.0" text="Update Appointment" />
+            <Button fx:id="deleteAppointment" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#onDeleteAppointment" prefHeight="25.0" prefWidth="150.0" text="Delete Appointment" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="303.0" layoutY="511.0" prefHeight="91.0" prefWidth="150.0" spacing="30.0">
+         <children>
+            <Button fx:id="reports" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#onReports" prefHeight="25.0" prefWidth="150.0" text="Reports" />
+         </children>
+      </VBox>
+      <Button fx:id="nextTableButton" layoutX="638.0" layoutY="255.0" mnemonicParsing="false" onAction="#onNextTable" text="Biweekly View" />
+      <Label layoutX="29.0" layoutY="259.0" text="Currently Viewing:" />
+      <Label fx:id="viewLabel" layoutX="148.0" layoutY="259.0" text="View" />
+   </children>
+</AnchorPane>

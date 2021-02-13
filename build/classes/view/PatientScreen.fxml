@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientController">
+   <children>
+      <Label fx:id="patientLabel" alignment="CENTER" layoutX="1.0" layoutY="30.0" prefHeight="35.0" prefWidth="750.0" text="Add Patient">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="65.0" prefHeight="450.0" prefWidth="700.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="450.0" prefWidth="200.0" spacing="28.0">
+               <children>
+                  <Label fx:id="nameLabel" text="Name" />
+                  <Label fx:id="address1label" text="Address" />
+                  <Label fx:id="address2Label" text="Address Line 2" />
+                  <Label fx:id="cityLabel" text="City" />
+                  <Label fx:id="stateLabel" text="State" />
+                  <Label fx:id="zipLabel" text="ZIP" />
+                  <Label fx:id="phoneLabel" text="Phone" />
+                  <Label fx:id="insuranceLabel" text="Insurance Provider" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="350.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="nameTextBox" promptText="name" />
+                  <TextField fx:id="addressTextBox" promptText="address" />
+                  <TextField fx:id="address2TextBox" promptText="address line 2" />
+                  <TextField fx:id="cityTextBox" promptText="City" />
+                  <ChoiceBox fx:id="stateCB" prefHeight="25.0" prefWidth="356.0" />
+                  <TextField fx:id="zipTextBox" promptText="ZIP" />
+                  <TextField fx:id="phoneTextBox" promptText="Phone" />
+                  <TextField fx:id="insuranceTextBox" promptText="Insurance Provider" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="18.0" layoutY="515.0" prefHeight="25.0" prefWidth="700.0" spacing="30.0">
+         <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#onAddButton" prefWidth="100.0" text="Add" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancel" prefWidth="100.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

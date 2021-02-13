@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportController">
+   <children>
+      <VBox alignment="CENTER" layoutX="225.0" layoutY="14.0" prefHeight="500.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Number of Appointments by Type" />
+            <TableView fx:id="numberTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="TypeColumn" prefWidth="225.0" text="Type" />
+                <TableColumn fx:id="number_numberColumn" prefWidth="75.0" text="Total" />
+              </columns>
+            </TableView>
+            <Label text="Appointment Totals by Counselor for Current Year" />
+            <TableView fx:id="counselorTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="counselorColumn" prefWidth="225.0" text="Counselor" />
+                <TableColumn fx:id="counselor_numberColumn" prefWidth="75.0" text="Total" />
+              </columns>
+            </TableView>
+            <Label text="Appointment Totals by State for Current Year" />
+            <TableView fx:id="stateTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="stateColumn" prefWidth="225.0" text="State" />
+                <TableColumn fx:id="state_numberColumn" prefWidth="75.0" text="Total" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="cancelButton" layoutX="349.0" layoutY="541.0" mnemonicParsing="false" onAction="#onCancelButton" text="Cancel" />
+   </children>
+</AnchorPane>
